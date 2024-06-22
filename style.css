@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+
+}
+
+@font-face {
+    font-family: word-sans-regular;
+    src: url(assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: word-sans-bold;
+    src: url(assets/fonts/static/WorkSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: word-sans-semibold;
+    src: url(assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+
+body{
+    font-family: word-sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--Light-pink);
+    font-size: 16px;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.background-image{
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+.desktop{
+    display: none;
+}
+
+.background-image img{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    max-width: 90vw;
+    max-height: 90vh;
+    background-color:var(--White) ;
+    z-index:1;
+    border-radius: 7px;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.container{
+    padding: 3.5vh;
+}
+
+.heading{
+    margin-left:1.3rem;
+    /* font-size: 1.7rem; */
+    color: var(--Dark-purple);
+    font-family: word-sans-bold;
+}
+
+.head img{
+    height: 4vh;
+}
+
+.question p{
+    width: 75%;
+    font-family: word-sans-semibold;
+    color: var(--Dark-purple);
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.answer{
+    font-family: word-sans-regular;
+    color: var(--Grayish-purple);
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+
+.minus{
+    display: none;
+}
+
+.answer{
+    display: none;
+}
+
+.question4 .question{
+    margin-bottom: 0px;
+}
+
+.heading:hover{
+cursor: default;
+}
+
+.question:hover{
+    cursor: pointer;
+}
+
+.question p:hover{
+    color: purple;
+}
+
+@media screen and (min-width:750px) {
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    main{
+        max-width: 40dvw;
+    }
+}
